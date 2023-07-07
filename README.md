@@ -31,3 +31,13 @@ WEB: www, w3, world wide web
   - Markup Language: 태그 등을 이용하여 문서나 데이터의 구조를 표시하는 언어
 - HTML 은 프로그래밍 언어가 아닌 콘텐츠의 구조를 정의하는 _마크업 언어!_
 - 웹을 이루는 가장 기초적인 구성 요소로, 웹 콘텐츠의 의미와 구조를 정의
+
+- HTML과 CSS의 버전 - living standard 버전을 올리지 않고 업데이트되는 중
+- 오류를 알려주지 않는 마크업을 검사하는 방법
+  https://validator.w3.org/
+  <!DOCTYPE html>
+      - 이 문서는 living Standard 문서!
+      - 완전 표준 모드로 렌더링
+      - DTD 문서의 타입에 대한 정보를 제공. 없으면 쿼크 모드(하위 호환성 모드)로 html을 렌더링하게 됩니다.
+- lang 속성을 통해 해당 페이지의 주 언어가 무엇인지 설정할 수 있다.
+  ex) ko-KR 한국어, 대한민국
