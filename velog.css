@@ -46,7 +46,7 @@ ul li::before {
     display: block;
     width: 1em;
     height: 1em;
-    margin: 0 8px;
+    margin-right: 8px;
     background-color: black;
 }
 
