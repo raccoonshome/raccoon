@@ -78,7 +78,7 @@ header nav {
 /* main */
 main section {
     width: 100%;
-    padding-top: 80px;
+    padding: 80px 0;
 }
 
 section#first>div {
@@ -287,4 +287,29 @@ ul.login-link li:nth-child(2)::before {
 
 ul.login-link li:nth-child(3)::before {
     background-image: url();
+}
+
+table {
+    width: 70%;
+    margin: 0 auto;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 0.5em;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+thead {
+    background-color: rgba(39, 85, 125, 0.5);
+    color: white;
+}
+
+th {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+td {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    font-weight: 400;
 }
