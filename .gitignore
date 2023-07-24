@@ -1,7 +1,7 @@
-
+<<<<<<< HEAD
 likelion/
 practice/
-node_modules/
+=======
 # Created by https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,visualstudiocode
 
@@ -51,3 +51,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode
+>>>>>>> cd8d14a ([ADD] CSS 특강 과제 제출)
