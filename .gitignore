@@ -1,3 +1,7 @@
+
+likelion/
+practice/
+node_modules/
 # Created by https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,visualstudiocode
 
@@ -45,9 +49,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
-# ref로 시작하는 파일 무시하기
-/ref[1-2].html
-/ref[1-2].css
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode
