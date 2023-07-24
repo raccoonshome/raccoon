@@ -1,4 +1,4 @@
-export const bucketForm = document.querySelector("#bucketForm");
+const bucketForm = document.querySelector("#bucketForm");
 const bucketLabel = bucketForm.querySelector("label");
 const bucketInput = bucketForm.querySelector("input");
 const bucketButton = bucketForm.querySelector("#add");
@@ -6,10 +6,11 @@ const resetButton = bucketForm.querySelector("#reset");
 
 resetButton.addEventListener("click", removeAll);
 
-export const bucketList = document.querySelector("#bucketlist");
-export let buckets = [];
+const bucketList = document.querySelector("#bucketlist");
+let buckets = [];
 let inBucket = {};
 const altText = "내용을 입력해주세요";
+let userBucket = bucketInput.value;
 let newID = Date.now();
 
 const Bucket_KEY = "bucket";
@@ -55,17 +56,17 @@ function downLabel() {
 function paintBucket(list) {
   const bucket = document.createElement("li");
   const delBtn = document.createElement("button");
-  const content = document.createElement("span");
+  const span = document.createElement("span");
   delBtn.addEventListener("click", deleteBucket);
   bucket.id = newID;
-  bucket.appendChild(content);
+  bucket.appendChild(span);
   bucket.appendChild(delBtn);
   bucketList.appendChild(bucket);
   delBtn.innerText = "X";
-  content.innerText = list.value;
+  span.innerText = list.value;
   bucket.addEventListener("click", function () {
-    content.style.textDecorationLine =
-      content.style.textDecorationLine === "none" ? "line-through" : "none";
+    bucket.style.textDecorationLine =
+      bucket.style.textDecorationLine === "none" ? "line-through" : "none";
   });
 }
 
