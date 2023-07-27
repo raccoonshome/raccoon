@@ -3,7 +3,8 @@
   <head>
     <title>My Bucket Lists</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="index.js" defer></script>
+    <script type="module" src="index.js" defer></script>
+    <script type="module" src="fullscreen.js" defer></script>
   </head>
   <body>
     <section>
@@ -14,13 +15,13 @@
         <div class="section">
           <!-- add bucketlist -->
           <ul id="bucketlist"></ul>
-          <form action="" id="bucketForm">
-            <label for="bucket" class="">버킷리스트</label>
-            <input id="bucket" type="text" />
-            <button type="submit" title="추가하기" id="add">+</button>
-            <button type="reset" id="reset">X</button>
-          </form>
         </div>
+        <form action="" id="bucketForm">
+          <label for="bucket" class="">버킷리스트</label>
+          <input id="bucket" type="text" />
+          <button type="submit" title="추가하기" id="add">+</button>
+          <button type="reset" id="reset">X</button>
+        </form>
       </div>
     </section>
   </body>
