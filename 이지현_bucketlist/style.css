@@ -23,6 +23,10 @@ ol {
 }
 
 /* style */
+section {
+    position: relative;
+}
+
 .wrapper {
     background-color: #eee;
     width: 448px;
@@ -57,7 +61,25 @@ ol {
     padding: 38px;
 }
 
-#bucketlist {}
+.full-screen {
+    position: sticky;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.header.full-screen {
+    top: 0;
+}
+
+#bucketForm.full-screen {
+    position: fixed;
+    bottom: 0;
+}
+
+#bucketlist {
+    transition: all 1s;
+}
 
 #bucketlist li {
     border-radius: 10px;
