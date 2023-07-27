@@ -67,11 +67,15 @@ ol {
     margin-bottom: 14px;
     color: #333;
     display: flex;
-    flex-shrink: 1;
 }
 
 #bucketlist li:hover {
     border: 4px solid #759CFF;
+}
+
+#bucketlist li span {
+    flex-grow: 1;
+    word-break: break-word;
 }
 
 #bucketlist li button {
@@ -84,7 +88,6 @@ ol {
     border: none;
     background-color: #fff;
     flex-shrink: 0;
-    margin-left: auto;
 }
 
 #bucketlist li:hover button {
