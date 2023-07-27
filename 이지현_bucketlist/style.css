@@ -25,8 +25,6 @@ ol {
 /* style */
 section {
     position: relative;
-    min-height: 100%;
-    height: auto;
 }
 
 .wrapper {
@@ -66,14 +64,16 @@ section {
 .full-screen {
     position: sticky;
     left: 0;
-    top: 0;
     right: 0;
     margin: 0 auto;
 }
 
+.header.full-screen {
+    top: 0;
+}
 
-#bucketForm.bottom-screen {
-    position: sticky;
+#bucketForm.full-screen {
+    position: fixed;
     bottom: 0;
 }
 
