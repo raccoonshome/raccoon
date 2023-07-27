@@ -25,6 +25,8 @@ ol {
 /* style */
 section {
     position: relative;
+    min-height: 100%;
+    height: auto;
 }
 
 .wrapper {
@@ -64,16 +66,14 @@ section {
 .full-screen {
     position: sticky;
     left: 0;
+    top: 0;
     right: 0;
     margin: 0 auto;
 }
 
-.header.full-screen {
-    top: 0;
-}
 
-#bucketForm.full-screen {
-    position: fixed;
+#bucketForm.bottom-screen {
+    position: sticky;
     bottom: 0;
 }
 
@@ -126,7 +126,7 @@ section {
 #bucketForm label {
     position: absolute;
     top: calc(50% - 1em);
-    left: calc(15px + 4px);
+    left: calc(15px + 2em);
     color: #FF007A;
     background-color: #fff;
     border-radius: 1em;
@@ -135,8 +135,7 @@ section {
 }
 
 #bucketForm label.bucketLabel {
-    top: -1em;
-    left: 1em;
+    top: 1em;
 }
 
 #bucketForm input {
