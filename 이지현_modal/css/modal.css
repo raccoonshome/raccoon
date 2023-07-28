@@ -56,6 +56,11 @@ section {
     max-height: 40px;
 }
 
+.section1 input[class*="login"]:focus-visible {
+    color: black;
+    outline-color: #F4492E;
+}
+
 .keeping {
     display: flex;
     justify-content: flex-start;
@@ -65,18 +70,30 @@ section {
     margin-bottom: 3vh;
 }
 
-.keeping input:checked {
-    border-radius: 50%;
-    border: 1px solid var(--767676);
-    width: fit-content;
+.keeping input:checked+label::before {
+    background: center left 40%/60% no-repeat url(../images/checked.svg);
+    background-color: var(--blue);
 }
 
 .keeping label {
     color: var(--767676);
     font-weight: 500;
     font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
 }
 
+.keeping label::before {
+    content: "";
+    display: block;
+    background: center left 40%/60% no-repeat url(../images/check.svg);
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 50%;
+    border: 1px solid var(--767676);
+}
 
 .forLogin {
     color: var(--767676);
