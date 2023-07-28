@@ -42,3 +42,10 @@ button.login {
     inset: 0;
     margin: auto;
 }
+
+.message {
+    color: #F4492E;
+    margin-bottom: 1vh;
+    margin-left: 0.5em;
+    transform: translateY(-0.5em);
+}
