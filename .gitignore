@@ -1,6 +1,3 @@
-likelion/
-practice/
-=======
 # Created by https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,visualstudiocode
 
@@ -49,5 +46,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+## folder ignore
+김건희_bucketlist/
+김건희_fox/
+
 # End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode
->>>>>>> cd8d14a ([ADD] CSS 특강 과제 제출)
