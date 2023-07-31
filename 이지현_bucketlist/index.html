@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>My Bucket Lists</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="index.js" defer></script>
+    <script type="module" src="fullscreen.js" defer></script>
+  </head>
+  <body>
+    <section>
+      <div class="wrapper">
+        <div class="header full-screen">
+          <h1 class="title">My Bucket List</h1>
+        </div>
+        <div class="section">
+          <!-- add bucketlist -->
+          <ul id="bucketlist"></ul>
+        </div>
+        <form action="" id="bucketForm" class="section bottom-screen">
+          <label for="bucket" class="">버킷리스트</label>
+          <input id="bucket" type="text" />
+          <button type="submit" title="추가하기" id="add">+</button>
+          <button type="reset" id="reset">X</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
