@@ -1,9 +1,9 @@
 ---
-name: "[HW] 새로운 과제 이름 #숫자"
-about: Describe this issue template's purpose here.
-title: "[HW] 과제이름 #과제번호"
+name: "[HW] 새로운 과제 이름 / 브랜치이름"
+about: 과제 관리 템플릿
+title: "[HW] 과제이름 / 브랜치이름"
 labels: HOMEWORK
-assignees: Sleepingoff, wooluck210
+assignees: ''
 
 ---
 
