@@ -1,0 +1,18 @@
+body {
+    background-color: var(--f2);
+}
+
+
+.login-section {
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid var(--767676);
+    width: 500px;
+    height: fit-content;
+    background: #fff;
+    padding: 30px;
+}
+
+.login-section p {
+    margin: 28px auto;
+}
