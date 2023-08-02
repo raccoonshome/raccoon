@@ -1,0 +1,47 @@
+/* header */
+header {
+    text-align: center;
+
+}
+
+/* main */
+
+
+h2 {
+    width: 448px;
+    background-color: var(--primary);
+    border-radius: 8px;
+    padding: 18px 40px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+div.inner:hover .menu {
+    display: block;
+}
+
+.menu {
+    display: none;
+    background-color: var(--light);
+    border-radius: 8px;
+    width: 448px;
+    margin: 10px auto;
+    transition: all 0.3s;
+}
+
+.menu li {
+    background-color: var(--light);
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+.menu li:hover {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.menu li a {
+    display: block;
+    width: 100%;
+    padding: 18px;
+}
