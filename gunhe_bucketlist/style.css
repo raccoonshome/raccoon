@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+body {
+  background-color: #d9d9d9;
+  height: 100vh;
+  display: flex;
+}
+.wrapper {
+  width: 448px;
+
+  background-color: white;
+  margin: auto;
+  border-radius: 20px;
+  background: #eee;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.header {
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+  border-bottom: 4px solid #ddd;
+  background: #fff;
+  padding: 44px 0px;
+}
+.title {
+  display: flex;
+  gap: 39px;
+  align-items: center;
+  font-size: 24px;
+  color: #ff007a;
+}
+.title::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 32px;
+  border-radius: 0px 10px 10px 0;
+  background-color: #ff007a;
+}
+.main {
+  width: 100%;
+  padding: 38px;
+}
+.list-item {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: 4px solid #d9d9d9;
+  background: #fff;
+  color: #888;
+  margin-bottom: 14px;
+}
+.list-item.select {
+  border: 4px solid #759cff;
+  display: flex;
+  justify-content: space-between;
+  color: #759cff;
+}
+.list-item.select::after {
+  content: url(./images/Frame.svg);
+  width: 20px;
+  height: 20px;
+  margin-left: 2px;
+}
+.main-list .list-item p {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
