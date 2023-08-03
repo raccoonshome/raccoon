@@ -1,0 +1,43 @@
+:root {
+    --primary: #0099A3;
+    --dark-grey: #111818;
+    --light: #F7F7F7;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.wrap {
+    flex-direction: column;
+
+}
+
+h1 {
+    font-family: Noto Sans KR;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--dark-grey);
+}
+
+h2 {
+    font-family: Noto Sans KR;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: white;
+}
+
+p {
+    font-family: Noto Sans KR;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--dark-grey);
+}
