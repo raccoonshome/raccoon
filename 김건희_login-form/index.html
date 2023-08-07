@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="./login-form.css" />
+  </head>
+  <body>
+    <section class="login-contain">
+      <header class="header">
+        <h1>로그인 또는 회원가입</h1>
+        <img src="./images/close.png" width="16px" alt="나가기" />
+      </header>
+      <p class="text">위니브에서 여러분의 궁금증을 해결하세요! :)</p>
+      <form class="login-form">
+        <div class="login-input">
+          <label for="id" class="a11y-hidden">아이디 입력란</label>
+          <input type="text" id="id" class="input" placeholder="아이디" />
+          <p class="text-info text-id">아이디를 입력해 주세요.</p>
+        </div>
+        <div class="login-input">
+          <label for="pw" class="a11y-hidden">비밀번호 입력란</label>
+          <input type="password" id="pw" class="input" placeholder="비밀번호" />
+          <p class="text-info text-pw">비밀번호를 입력해 주세요.</p>
+        </div>
+
+        <div class="login-check">
+          <input type="checkbox" id="inpHold" class="inphold txt-hide" />
+          <label for="inpHold" class="labl-hold">로그인 상태 유지</label>
+        </div>
+        <button type="submit" class="login-btn">로그인</button>
+      </form>
+      <div class="login-func">
+        <a href="#" class="login-func-join">회원가입</a>
+        <a href="#" class="login-func-find">아이디/비밀번호 찾기</a>
+      </div>
+
+      <section class="author-login">
+        <hr />
+        <div>
+          <a href="#" class="login-button google">
+            <p>구글 계정으로 로그인</p>
+          </a>
+          <a href="#" class="login-button facebook">
+            <p>페이스북 계정으로 로그인</p>
+          </a>
+          <a href="#" class="login-button naver">
+            <p>네이버 계정으로 로그인</p></a
+          >
+          <a href="#" class="login-button kakao">
+            <p>카카오톡 계정으로 로그인</p></a
+          >
+        </div>
+      </section>
+    </section>
+    <script src="./login-form.js"></script>
+  </body>
+</html>
