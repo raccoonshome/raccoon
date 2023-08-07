@@ -1,0 +1,16 @@
+{
+  "name": "likeliongit",
+  "version": "1.0.0",
+  "description": "멋쟁이 사자처럼 7기 너구리굴",
+  "scripts": {
+    "dev": "parcel ./jihyeon_bucketlist/index.html",
+    "build": "parcel build ./jihyeon_bucketlist/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mobx": "^6.10.0",
+    "mobx-react": "^9.0.0",
+    "typescript": "^5.1.6"
+  }
+}
