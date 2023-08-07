@@ -1,10 +1,15 @@
 /* reset 설정 */
-body, h1, p, ul, li {
+body,
+h1,
+p,
+ul,
+li {
   margin: 0;
   padding: 0;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
 }
 
@@ -36,12 +41,14 @@ body {
   display: flex;
   align-items: center;
 }
+
 .sign {
   width: 8px;
   height: 32px;
   border-radius: 0px 10px 10px 0px;
   background: #FF007A;
 }
+
 .title h1 {
   color: #FF007A;
   font-family: Arial;
