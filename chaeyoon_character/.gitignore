@@ -46,8 +46,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-## folder ignore
-김건희_bucketlist/
-김건희_fox/
+# ref로 시작하는 파일 무시하기
+/ref[1-2].html
+/ref[1-2].css
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode
