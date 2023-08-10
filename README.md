@@ -3,6 +3,7 @@
 멋쟁이 사자처럼 7기 너구리굴
 
 ## 커밋 컨벤션
+
 파일 생성 혹은 과제 시작
 
 [ADD] 한글 / 영어
@@ -20,3 +21,10 @@
 - [REFACTOR] 코드 리팩토링
 - [CHORE] setting과 관련한 문제
 - [REVIEW] 코드 리뷰 키워드
+
+## 내 브랜치에 merge된(main) branch 가져오기
+
+1. git switch /merge된 branch(main)/
+2. git pull /repo이름/ /merge된 branch(main)/
+3. git switch /작업할 branch(내 branch)/
+4. git rebase /merge된 branch(main)/
