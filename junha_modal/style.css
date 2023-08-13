@@ -25,9 +25,9 @@ main {
   border-bottom: 1px solid #C4C4C4;
   position: relative;
 }
-.login-head::after {
+/* .login-head::after { */
   /* close 아이콘을 2x로 export해서 bg-size로 크기를 줄여줘야 함 */
-  display: inline-block;
+  /* display: inline-block;
   content: '';
   width: 16px;
   height: 16px;
@@ -37,7 +37,7 @@ main {
   position: absolute;
   right: 24px;
   top: 22px;
-}
+} */
 
 /* 로그인 섹션 */
 section {
@@ -163,4 +163,17 @@ section {
   line-height: normal;
   /* 마진 병합 현상 */
   margin: 20px auto;
+}
+
+.close {
+  /* close 아이콘을 2x로 export해서 bg-size로 크기를 줄여줘야 함 */
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url(./imgs/close.png);
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  position: absolute;
+  top: 7.7em;
+  right: 27.5em;
 }
