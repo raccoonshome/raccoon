@@ -11,46 +11,46 @@ sayings = [
   { "quote": "어디를 가든지 마음을 다해 가라.", "person": "공자" },
 ];
 
-function printQuote() {
-  let button = document.querySelector("button")
-  
+function randomSort() {
+  let randomNum = [];
+  while (randomNum.length < 10) {
+    let num = parseInt(Math.random() * 10 + 1);
+    if (!randomNum.includes(num)) {
+      randomNum.push(num);
+    }
+  }
 }
 
-// 명언의 개수만큼 랜덤한 숫자 배열 생성
-// let randomNum = [];
-// while (randomNum.length < 10) {
-//   let num = parseInt(Math.random() * 10 + 1);
-//   if (!randomNum.includes(num)) {
-//     randomNum.push(num);
-//   }
-// }
-// console.log(randomNum);
+function printQuote(sayingArr) {
+  let num = parseInt(Math.random() * 10 + 1)-1;
 
-// let newSayings = [];
-// // 새로운 배열에 랜덤한 숫자 배열의 순서대로 명언 배열 추가
-// for (let i = 0; i < randomNum.length; i++) {
-//   newSayings.push(sayings[randomNum[i] - 1]);
-//   console.log(newSayings);
+  let quotes = document.querySelector(".quotes")
+  // 명언과 사람을 담을 div 태그 생성
+  let onequote = document.createElement("div");
+  // div 태그 .quotes 클래스에 자식요소로 추가
+  quotes.appendChild(onequote);
 
-//   let quotes = document.querySelector(".quotes")
-//   // 명언과 사람을 담을 div 태그 생성
-//   let onequote = document.createElement("div");
-//   // div 태그 .quotes 클래스에 자식요소로 추가
-//   quotes.appendChild(onequote);
+  // 명언 p 태그 생성
+  let sayingTag = document.createElement("p");
+  sayingTag.classList.add('saying')
+  // 사람 p 태그 생성
+  let personTag = document.createElement("p");
+  personTag.classList.add('person')
 
-//   // 명언 p 태그 생성
-//   let sayingTag = document.createElement("p");
-//   sayingTag.classList.add('saying')
-//   // 사람 p 태그 생성
-//   let personTag = document.createElement("p");
-//   personTag.classList.add('person')
+  // div 태그에 명언, 사람 태그 추가
+  onequote.appendChild(sayingTag);
+  onequote.appendChild(personTag);
 
-//   // div 태그에 명언, 사람 태그 추가
-//   onequote.appendChild(sayingTag);
-//   onequote.appendChild(personTag);
+  // 명언, 사람 태그에 내용 추가
+  sayingTag.innerText = sayingArr[num]["quote"];
+  personTag.innerText = sayingArr[num]["person"];
+}
 
-//   // 명언, 사람 태그에 내용 추가
-//   sayingTag.innerText = newSayings[i]["quote"];
-//   personTag.innerText = newSayings[i]["person"];
-// }
+let button = document.querySelector(".btn")
+// 콜백함수에 지역변수 전달하는 방법
+// https://velog.io/@ywoosang/addEventListener-%EC%BD%9C%EB%B0%B1%ED%95%A8%EC%88%98-%EC%A0%9C%EB%8C%80%EB%A1%9C-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0
+button.addEventListener("click", () => 
+  printQuote(sayings)
+  )
+
 
