@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D3</title>
+  </head>
+  <body>
+    <!-- svg안에서는 문서 작성용 태그가 아니라 svg 자체의 태그를 사용한다. -->
+    <!-- width,height: 캔버스의 크기 지정 -->
+    <svg width="500px" height="500px">
+      <g>
+        <!-- 그룹 -->
+        <!-- 원 cy: y좌표 cx: x좌표 r: 반지름 -->
+        <circle cy="50" cx="50" r="30"></circle>
+        <circle cy="150" cx="150" r="30"></circle>
+        <circle cy="250" cx="250" r="30"></circle>
+        <circle cy="350" cx="350" r="30"></circle>
+        <!-- 사각형 x: x좌표 y: y좌표 width,height: 크기 style: 스타일 -->
+        <rect
+          x="200"
+          y="50"
+          width="100"
+          height="100"
+          style="fill: aquamarine; stroke: green; stroke-width: 10px"
+        ></rect>
+        <!-- fill: 배경색 stroke: 선색 stroke-width: 선두께 -->
+        <!-- 주의: stroke-width의 경우 공간을 차지하지 않는다. 실제 사각형의 크기는 100*100이며, 
+            stroke-width는 stroke 기준의 내부와 외부의 반반씩 두께를 나눠서 가진다. -->
+
+        <!-- 경로 그리기 d: 한붓그리기라고 생각하며 좌표를 지정한다. -->
+        <path d="M 100,300 100,350 200,300 200,350" style="fill: black"></path>
+      </g>
+      <text x="400" y="400">hello world</text>
+    </svg>
+
+    <div class="canvas"></div>
+    <script type="module" src="d3.js"></script>
+  </body>
+</html>
