@@ -1,0 +1,55 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* CSS 적용 */
+section {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1{
+  font-size: 3rem;
+  border: 2px solid #223E63;
+  border-radius: 20px;
+  background-color: #223E63;
+  text-align: center;
+  padding: 5px 0;
+  color: white;
+}
+
+.quotes div {
+  margin: 20px auto;
+  border-bottom: 2px solid #223E63;
+  background-color: #72A3CC;
+  border-radius: 20px;
+}
+
+.quotes p {
+  text-align: center;
+}
+
+.quotes .saying {
+  font-size: 1.5rem;
+}
+
+.quotes .person {
+  font-weight: 700;
+}
+
+.quotes .person::before{
+  content: '-';
+  display: inline;
+}
+.quotes .person::after{
+  content: '-';
+  display: inline;
+}
