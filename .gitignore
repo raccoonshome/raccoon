@@ -50,5 +50,6 @@ $RECYCLE.BIN/
 node_modules/
 likelion/
 practice/
+d3/
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode
