@@ -1,4 +1,4 @@
-import { bucketForm, bucketList, buckets } from "./index.js";
+import { bucketForm, bucketList, buckets } from "./index.mjs";
 const section = document.querySelector(".section");
 const header = document.querySelector(".header");
 /*

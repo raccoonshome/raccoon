@@ -69,7 +69,8 @@
         //   canvas.classList.remove(`colors-${x.innerText}`);
         // });
 
-        canvas.classList.remove(`colors-red`, `colors-yellow`, `colors-green`);
+        //canvas.classList.remove(`colors-red`, `colors-yellow`, `colors-green`);
+        canvas.className = "canvas";
         const newClass = e.target.innerText;
 
         // switch (newClass) {
@@ -91,7 +92,6 @@
       btn.forEach((x, i) => {
         x.addEventListener("click", makeColorful);
       });
-      console.dir(addEventListener);
     </script>
   </body>
 </html>

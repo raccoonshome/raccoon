@@ -3,15 +3,12 @@ const bucketLabel = bucketForm.querySelector("label");
 const bucketInput = bucketForm.querySelector("input");
 const bucketButton = bucketForm.querySelector("#add");
 const resetButton = bucketForm.querySelector("#reset");
-
 resetButton.addEventListener("click", removeAll);
-
 export const bucketList = document.querySelector("#bucketlist");
 export let buckets = [];
 let inBucket = {};
 const altText = "내용을 입력해주세요";
 let newID = Date.now();
-
 const Bucket_KEY = "bucket";
 //하나의 키로 저장해야 한번에 불러올 때 사용할 수 있다.
 //처음에 랜덤한 키로 개별저장했는데, 랜덤한 키는 한번에 불러오기 힘들다.
