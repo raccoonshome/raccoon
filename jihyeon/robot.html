@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>food robot</title>
+  </head>
+  <body>
+    <script>
+      function RobotFactory(foodNames) {
+        //접근 불가
+        const foodList = [...foodNames];
+        //랜덤한 음식 출력 시 이전 음식 인덱스 저장하기
+        const array = [];
+        return {
+          //새로운 생성자 함수를 return
+          RobotFood() {
+            //랜덤한 수 생성
+            let randomNum = parseInt(Math.random() * foodList.length);
+            //랜덤한 수와 기존 출력한 음식 비교
+            while (array.includes(randomNum)) {
+              if (array.length === foodList.length) return "그만 먹어!!";
+              randomNum = parseInt(Math.random() * foodList.length);
+            }
+            //랜덤한 수를 저장
+            array.push(randomNum);
+            //최종 출력
+            return foodList[randomNum];
+          },
+        };
+      }
+
+      //return한 함수에 new 키워드가 적용이 되는지 궁금합니다!
+      const robot = RobotFactory(["피자", "햄버거", "라면"]);
+
+      //음식과 재고를 같이 입력받는다면?
+      //"피자", 1, "햄버거", 3, "라면", 2
+
+      function RobotFactoryStore(foodNames) {
+        //접근 불가
+        const foodList = foodNames.filter((e) => typeof e === "string");
+        const foodStore = foodNames.filter((e) => typeof e === "number");
+
+        //모든 음식 재고 파악하기
+        let allFoodCount = foodStore.reduce((a, c) => (a += c), 0);
+
+        let randomNum = parseInt(Math.random() * foodList.length);
+        let prevNum = -1;
+        const getFood = () => {
+          //예외처리
+          if (allFoodCount === 0) return "재고없음";
+          //하나의 음식만 남은 경우
+          if (foodStore.filter((e) => e != 0).length === 1) prevNum = -1;
+          //랜덤한 수와 기존 출력한 음식 비교
+          while (prevNum === randomNum || foodStore[randomNum] === 0) {
+            randomNum = parseInt(Math.random() * foodList.length);
+          }
+          prevNum = randomNum;
+          foodStore[randomNum]--;
+          allFoodCount--;
+          return foodList[randomNum];
+        };
+
+        const countFood = () => {
+          const remainFoodList = foodStore.filter((e) => e > 0);
+          if (remainFoodList.length === 0) return "재고없음";
+          let list = "";
+          remainFoodList.forEach((e, i) => {
+            list += `${foodList[i]}/${e} `;
+          });
+          return list;
+        };
+
+        function Robot() {
+          this.serveFood = getFood;
+          this.remainFoods = countFood;
+        }
+
+        return new Robot();
+      }
+
+      const newRobot = RobotFactoryStore(["피자", 1, "햄버거", 3, "라면", 2]);
+    </script>
+  </body>
+</html>
