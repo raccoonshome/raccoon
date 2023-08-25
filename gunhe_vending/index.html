@@ -14,6 +14,7 @@
     />
 
     <link rel="stylesheet" href="./css/style.css" />
+    <script type="module" src="js/index.js"></script>
   </head>
 
   <body>
@@ -73,7 +74,7 @@
         <div class="container">
           <div class="bg-box">
             <h2 class="box-title">잔액 :</h2>
-            <p>1,000원</p>
+            <p id="balance-money">1,000원</p>
           </div>
           <button type="button" class="btn">거스름돈 반환</button>
 
@@ -113,7 +114,7 @@
       <section class="section2">
         <div class="bg-box">
           <h2 class="box-title">소지금 :</h2>
-          <p>25,000원</p>
+          <p id="my-money">25,000원</p>
         </div>
       </section>
       <section class="section3">
@@ -155,6 +156,5 @@
         <p class="total-price">총금액 : 9,000 원</p>
       </section>
     </main>
-    <script src="./js/index.js"></script>
   </body>
 </html>
