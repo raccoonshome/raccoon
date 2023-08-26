@@ -9,6 +9,9 @@ const myMoney = document.querySelector("#my-money");
 inputBtn.addEventListener("click", function () {
   //입금으로 입력한 금액을 가져옵니다.
   const value = +getInputValue(inputMoney);
+  const money = parseInt(myMoney.textContent.replaceAll(",", ""));
+
+  myMoney.textContent = numberReplace(money - value) + "원";
   //입금한 금액을 잔액에 표시해줍니다.
   //1. 현재 잔액을 가져옵니다.
   const balance = parseInt(balanceMoney.textContent.replaceAll(",", ""));
@@ -19,15 +22,20 @@ inputBtn.addEventListener("click", function () {
   //3. 더한 금액을 표시해줍니다.
   balanceMoney.textContent = numberReplace(valueAddBalance) + "원";
   inputMoney.value = "";
-
-  const money = parseInt(myMoney.textContent.replaceAll(",", ""));
-  myMoney.textContent = numberReplace(money - value) + "원";
 });
 /*
 예외처리!
 소지금보다 입금액이 클 순 없다
 입금액을 -로 넣거나, 0.0000021이렇게 넣거나 하는 등 예외처리 합니다.
 */
+inputMoney.addEventListener("input", function (e) {
+  const value = +e.target.value;
+  console.log(value);
+  const money = parseInt(myMoney.textContent.replaceAll(",", ""));
+  if (value < 0 || value > money || (value + "").length > (money + "").length) {
+    e.target.value = money;
+  }
+});
 //input값을 가져오는 함수 : event 내부에서만 작동
 function getInputValue(input) {
   return input.value;
