@@ -28,3 +28,16 @@ function numberReplace(number) {
   }
   return arr.join(",");
 }
+const colaBtn = document.querySelectorAll(".btn-cola");
+
+function clickColaBtn(item) {
+  const tagetItemTagName = item.target.tagName;
+  if (tagetItemTagName === "BUTTON") {
+    item.target.classList.toggle("on");
+  } else {
+    item.target.parentElement.classList.toggle("on");
+  }
+}
+colaBtn.forEach((item) => {
+  item.addEventListener("click", clickColaBtn);
+});
