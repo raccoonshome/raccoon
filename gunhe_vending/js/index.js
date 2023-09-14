@@ -38,6 +38,7 @@ function clickColaBtn(item) {
     item.target.parentElement.classList.toggle("on");
   }
 }
+
 colaBtn.forEach((item) => {
   item.addEventListener("click", clickColaBtn);
 });
