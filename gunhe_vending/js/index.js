@@ -38,7 +38,10 @@ function clickColaBtn(item) {
     item.target.parentElement.classList.toggle("on");
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4bbf9475fc6b311eea6b65d3acc63f5b629a6c51
 colaBtn.forEach((item) => {
   item.addEventListener("click", clickColaBtn);
 });
